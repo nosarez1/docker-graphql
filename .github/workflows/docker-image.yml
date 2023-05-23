@@ -33,4 +33,4 @@ jobs:
 
     - name: Push Docker image
       run: |
-        docker push nosarez/docker-graphql:0.0.2 .
+        docker push nosarez/docker-graphql:0.0.2
