@@ -29,14 +29,14 @@ jobs:
         
     - name: Build the Docker image
       env:
-        NEW_VERSION: ${{ steps.version.outputs.version
+        NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         docker build --tag nosarez/docker-graphql:$NEW_VERSION .
         docker build --tag nosarez/docker-graphql:latest .
         
     - name: Push Docker image
       env:
-        NEW_VERSION: ${{ steps.version.outputs.version
+        NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
         docker push nosarez/docker-graphql:$NEW_VERSION
         docker push nosarez/docker-graphql:latest
